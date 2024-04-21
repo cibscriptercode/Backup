@@ -1,0 +1,252 @@
+% ----------------------------------- PORTADA -----------------------------------
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \includegraphics[width=0.4\linewidth]{figuras/cuenca.png}\\
+        \LARGE
+        \unidad\\
+        \programa\\
+        \curso
+        
+        \vspace{1cm}
+        
+        \Huge
+        \textbf{\titulo}
+            
+        \vspace{0.5cm}
+        \LARGE
+        \subtitulo
+            
+        \vspace{1.5cm}
+        
+        \large    
+        \autores
+            
+        \vfill
+        
+        \lugar\\
+        \fecha
+        
+    \end{center}
+\end{titlepage}
+
+% -------------------------------DOCUMENTO PRINCIPAL -------------------------------
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+% Soporte para buenas urls e hipervínculos entre secciones
+\usepackage{hyperref}
+% Citas y referencias en formato APA
+% Si quiere las citas y referencias en IEEE comente esta línea
+\usepackage{apacite}
+\usepackage{graphicx}
+% Código fuente con números de línea
+\usepackage{listings}
+\usepackage{float}
+% Puede cambiar el lenguaje de código fuente
+% https://www.overleaf.com/learn/latex/code_listing#Supported_languages
+\lstset{
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+%====================================================%
+\def \unidad{Universidad de Cuenca}
+\def \programa{Ingeniería en Telecomunicaciones}
+\def \curso{Grupo \# 3 - Cálculo en varias variables}
+\def \titulo{Hola}
+\def \subtitulo {Resolución del ejercicio planteado en clase}
+\def \autores{
+    Javier Alexander Procel Morocho\\
+    javier.procel@ucuenca.edu.ec\\
+    
+    \vspace{0.5cm}
+    
+    Mateo Feijo\\
+    Correo electrónico\\
+
+    \vspace{0.5cm}
+    
+    Julio Josué Macas Guamán\\
+    julio.macas@ucuenca.edu.ec\\
+}
+\def \fecha{Octubre 2023}
+\def \lugar{
+    Azuay, 
+    Cuenca
+}
+
+%====================================================%
+\begin{document}
+\input{portada}
+\tableofcontents
+
+%====================================================%
+\section{Ejercicios}\label{intro}
+
+Resolver los ejercicios 5, 8, 19, 24, 37 y 38 del bloque de ejercicios 13.2
+%====================================================%
+\section{Problema y solución}\label{antecedentes}
+
+\subsection{Ejercicio 5-8}
+ 
+   \item (a) Trace la curva en un plano con la ecuación vectorial dada
+   \item (b) Determine r’(t).
+   \item (c) Trace el vector de posición r(t) y el vector tangente r9(t) para
+el valor dado de t. \vspace{3mm}
+ 
+   \item 5) $r(t)= e^{2t}i+ e^tj \hspace{1cm}    t= 0$ \vspace{3mm}
+
+a) 
+\begin{figure} [H]
+    \centering % Opcional, para centrar la imagen
+    \includegraphics[width=0.5\textwidth]{5.1.png}
+    \caption{Gráfica ejercicio 5}
+    \label{fig:etiqueta}
+\end{figure}
+b) \vspace{1mm}
+\begin{equation}
+    \centering
+    r'(t)= \frac{\mathrm{d} }{\mathrm{d} t}(e^{2t})i+ \frac{\mathrm{d} }{\mathrm{d} t}(e^t)j\vspace{1mm} 
+\end{equation}
+
+
+
+\begin{equation}
+    \centering
+    r'(t)= 2e^{2t}i+ e^tj \vspace{2mm} 
+\end{equation}
+\newpage
+c) 
+\begin{figure} [H]
+    \centering % Opcional, para centrar la imagen
+    \includegraphics[width=0.5\textwidth]{5}
+    \caption{Gráfica de la curva ejercicio 5}
+    \label{fig:etiqueta}
+\end{figure}
+
+\item 8) r (t)= (cos (t) +1)i+ (sen(t)-1)j \hspace{1cm} t= -$\pi$ / 3
+
+a) 
+
+\begin{figure} [H]
+    \centering % Opcional, para centrar la imagen
+    \includegraphics[width=0.5\textwidth]{8.1.png}
+    \caption{Gráfica de la curva ejercicio 8}
+    \label{fig:etiqueta}
+\end{figure}
+
+b) 
+\begin{equation}
+    \centering
+    r'(t)= \frac{\mathrm{d} }{\mathrm{d} t}(cos(t)+1)i+ \frac{\mathrm{d} }{\mathrm{d} t}(sen(t)-1)j\vspace{1mm} 
+\end{equation}
+
+
+
+\begin{equation}
+    \centering
+    r'(t)= -sen(t)i + cos(t)j 
+\end{equation} \newpage
+
+c) 
+\begin{figure} [H]
+    \centering % Opcional, para centrar la imagen
+    \includegraphics[width=0.5\textwidth]{8.png}
+    \caption{Gráfica de vectores ejercicio 8}
+    \label{fig:etiqueta}
+\end{figure}
+%====================================================%
+
+\subsection{Ejercicio 17-20}
+\item Determine el vector tangente unitario T(t) en el punto con
+el valor dado del parámetro t.
+\item 19)
+\begin{equation}
+    r(t) = cos(t)i + (3t)j + 2sen(2t)k, t = 0
+\end{equation}
+Encontramos la derivada
+\begin{equation}
+    r´(t) = -sen(t)i + 3j + 4cos(2t)k
+\end{equation}
+Dado el valor de t = 0, tenemos
+\begin{equation}
+    r(0) = i
+\end{equation}
+\begin{equation}
+    r´(0) = 3j + 4k
+\end{equation}
+El vector tangente unitario en el punto (1,0,0) es
+\begin{equation}
+    T(0) = \frac{r´(0)}{|r´(0)|}
+\end{equation}
+\begin{equation}
+    T(0) = \frac{3j + 4k}{\sqrt{3^2 + 4^2}}
+\end{equation}
+\begin{equation}
+    T(0) = \frac{3j + 4k}{5}
+\end{equation}
+\begin{equation}
+    T(0) = (\frac{3}{5})j + (\frac{4}{5})k
+\end{equation}
+
+%====================================================%
+\subsection{Ejercicios 23-26}
+\item Determine ecuaciones paramétricas para la recta tangente
+a la curva con las ecuaciones paramétricas dadas en el punto
+especificado
+\item 24)
+\begin{equation}
+    x = ln(t + 1), y = tcos(2t), z = 2^t, (0,0,1)
+\end{equation}
+\begin{equation}
+    r(t) = (ln(t + 1), tcos(2t), 2^t)
+\end{equation}
+Encontramos la derivada
+\begin{equation}
+    r´(t) = (\frac{1}{t + 1}, cos(2t) - 2t*sen(2t), 2^t*ln2)
+\end{equation}
+El vector parametro correspondiente al punto (0,0,1) es t = 1, asi que
+\begin{equation}
+    r´(1) = (\frac{1}{2}, 1.06, 1.38)
+\end{equation}
+La recta tangente que pasa por (0,0,1) es paralela al vector (\frac{1}{2}, 1.06, 1.38). Entonces las ecuacione spara
+
+%====================================================%
+\subsection{Ejercicios 37-38}\label{intro}
+
+\textbf{Evalúe la integral de:}
+
+\[\int_{0}^{1}(\frac{1}{t+1}i,\frac{1}{t^{2}+1}j,\frac{t}{t^{2}+1}k)dt\]
+
+Lo resolvemos por partes:
+Para i:
+\[\int_{0}^{1}(\frac{1}{t+1})dt\]
+\[u = t+1\]
+\[du = dt\]
+\[\int_{0}^{1}(\frac{1}{u}i)du = ln(u) = ln(t+1)\]
+\[ln((1)+1) - ln(0)+1) = ln(2)-ln(1) = 0.69\]
+
+Para j:
+\[\int_{0}^{1}(\frac{1}{t^{2}+1})dt = arctang(t)\]
+\[arctang(1) - arctang(0) = \frac{\pi}{4}\]
+
+Para k:
+\[\int_{0}^{1}(\frac{t}{t^{2}+1})dt\]
+\[u = t^{2}+1\]
+\[du = 2tdt\]
+\[\frac{1}{2} \int_{0}^{1}(\frac{du}{u}) = \frac{1}{2}ln(u) = \frac{1}{2}ln(t^{2}+1)\]
+\[\frac{1}{2}ln((1)^{2}+1)-\frac{1}{2}ln((0)^{2}+1) = \frac{1}{2}ln(2)-\frac{1}{2}ln(1) = 0.35\]
+
+Para el segundo ejercicio seria: 
+\[\int_{0}^{\frac{\pi }{4}}(sec(t)tan(t)i, tcos(2t)j, sen^{2}(2t)cos(2t)k)dt\]
+
+%====================================================%
+\end{document}

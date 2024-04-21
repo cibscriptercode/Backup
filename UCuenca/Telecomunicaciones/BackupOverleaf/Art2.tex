@@ -1,0 +1,192 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{apacite}
+\usepackage{listings}
+\usepackage{float}
+
+
+
+%===================================================%
+\begin{document}
+
+\title{Leyes del movimiento planetario de Kepler}
+
+\author{Julio Macas, Eduardo Mendieta, Paul Minga, Javier Procel}
+
+\maketitle
+
+\begin{abstract}
+Kepler's laws of planetary motion, formulated by astronomer Johannes Kepler in the 17th century, revolutionized our understanding of the solar system. These laws state that planets follow elliptical orbits around the Sun, with varying speeds as they move along their elliptical paths. Kepler's second law states that planets sweep out equal areas in equal times, while the third law relates orbital periods to the sizes of orbits. These laws laid the groundwork for Newton's law of universal gravitation and are fundamental in modern astronomy.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Excentricidad, gravitación, órbita,  planeta, satélite, movimiento
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+%===================================================%
+\section{Introducción}
+
+\IEEEPARstart{L}{as} leyes de Kepler, propuestas por el astrónomo alemán Johannes Kepler en el siglo XVII, describen el movimiento de los planetas alrededor del Sol. Kepler formuló tres leyes en donde revolucionó la percepción del sistema solar y el camino para las futuras teorías de la gravedad y la mecánica celeste. En este informe se explorará a detalle cada una de ellas que han sido fundamentales para el conocimiento astronómico.
+
+%===================================================%
+\section{Leyes de Kepler}
+Las leyes del movimiento planetario son leyes científicas que describen el movimiento de los planetas alrededor del Sol. El aporte fundamental de las leyes de Kepler fue dar a conocer que las órbitas de los planetas son elípticas y no circulares, como se creía antiguamente.\\
+Estas leyes son cinéticas, es decir, que su función es describir el movimiento planetario, cuyas características se deducen gracias a cálculos matemáticos.\cite{UNAM2023}
+\subsection{Ley de órbitas elípticas (Primer ley)}
+Kepler determina que los planetas giran alrededor del Sol describiendo una órbita con forma de elipse. Una elipse puede describirse como un círculo achatado.\\
+El grado de achatamiento de una curva cerrada se llama excentricidad. Cuando la excentricidad es igual a 0, la curva forma un círculo perfecto. Por otro lado, cuando la excentricidad es mayor que 0, ambos lados de la curva se vuelven planos y forman una elipse.\cite{SignificadosKepler}\\
+La fórmula para calcular la excentricidad es el siguiente:
+\begin{equation}
+    e = c/a
+\end{equation}
+En donde:\\
+— e es la excentricidad\\
+— c es la distancia del foco al centro o semidistancia focal\\
+— a es el semieje mayor\\
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/elip.png}
+    \caption{Representación gráfica de la excentricidad}
+    \label{fig:msf}
+\end{figure}\\
+En la primera imagen se observa que tiene excentricidad cero, mientras que en el otro su excentricidad varía.
+
+%===================================================%
+\subsection{Ley de las áreas (Segunda ley)}
+
+La segunda ley de Kepler, también conocida como la Ley de las Áreas, establece que un planeta se desplaza en su órbita de tal manera que la línea que conecta al planeta con el Sol barre áreas iguales en tiempos iguales. Esta ley es fundamental en la comprensión de los movimientos planetarios y complementan un papel crucial en la transición entre la geometría analítica y el cálculo integral.
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/segundaleykepler.PNG}
+    \caption{Ley de las Áreas}
+    \label{fig:msf}
+\end{figure}
+
+Antes de Kepler, la descripción de los movimientos planetarios se basaba en geometría y observación. Las órbitas planetarias se consideraban círculos excéntricos o epíciclos, y no se tenía un marco matemático riguroso para describir estos movimientos.
+
+La segunda ley de Kepler, formulada en el siglo XVII, introdujo una nueva forma de entender los movimientos planetarios. Kepler notó que los planetas se mueven más rápido en su órbita cuando están más cerca del Sol y más lentamente cuando están más lejos. Esto se tradujo en la idea de que el área barrida por una línea que conecta al planeta con el Sol es constante en el tiempo.
+
+La Ley de las Áreas de Kepler es un concepto fundamental en cálculo integral debido a que proporciona uno de los primeros ejemplos claros de la relación entre áreas y tasas de cambio, que es una idea central en el cálculo integra. Esta Ley establece que un planeta barre áreas iguales en tiempos iguales a lo largo de su órbita. Esto significa que la velocidad del planeta no es constante, sino que varía a medida que se desplaza a lo largo de su órbita. 
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/integralKepler.PNG}
+    \caption{Aplicación del cálculo integral}
+    \label{fig:msf}
+\end{figure}
+
+La observación de Kepler proporcionó un bosquejo matemático para entender las órbitas planetarias en términos de áreas y tasas de cambio. Este enfoque condujo a un mayor desarrollo de la geometría analítica y el cálculo integral, lo que permitió una descripción más precisa y matemáticamente sólida de los movimientos planetarios. \cite{bell2003segunda}
+
+\subsection{Ley armónica (Tercera ley)}
+
+Kepler, al igual que todo científico, tenía como objetivo buscar modelos matemáticos que sean capaz predecir el comportamiento de su objeto de estudio. Después de 10 años de haber planteado su segunda ley, logró encontrar un modelo que describía el comportamiento del periodo de un planeta y su orbita.\vspace{1mm}
+Encontró que su relación de denotaba de la siguiente forma: \vspace{1mm}
+
+\begin{equation}
+   \frac{T^2}{R^3} = K
+\end{equation}
+
+Entonces, en el caso de que sean 2 planetas orbitando una estrella, sería:
+
+\begin{equation}
+   \frac{T_1^2}{R_1^3} = \frac{T_2^2}{R_2^3}
+\end{equation}
+
+Esta misma se la puede ver de esta manera:
+
+\begin{equation}
+   \frac{T_1^2}{T_2^2} = \frac{R_1^3}{R_2^3}
+\end{equation}
+Cabe recalcar que esta fórmula no solo es aplicable a un planeta, si no también a cualquier satélite que orbite alrededor de un cuerpo celeste.\cite{de2010leyes} \vspace{1mm}
+
+En el  caso que tengamos dos cuerpos con masa $m_1$ y $m_2$ y una masa central M, usaríamos la siguiente fórmula:
+\begin{equation}
+   \frac{T_1^2 *(M+ m_1)}{T_2^2 * (M + m_2)} = \frac{R_1^3}{R_2^3}
+\end{equation}
+
+
+
+Esta ley fue publicada en 1614 y ayudo con el problema de la distancia de los planetas al sol. Fue mucho después que, Newton, con su ley de gravitación universal, explicaría el por qué de la relación entre el periodo y la distancia. \cite{KhanAcademy}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{kep}
+    \caption{Representación gráfica de la Tercera ley de Kepler}
+    \label{fig:enter-label}
+\end{figure}
+
+
+%===================================================%
+\section{Conclusiones}
+En conclusión, las leyes del movimiento planetario de Kepler han revolucionado nuestra comprensión del cosmos de maneras significativas:
+
+- Primero y ante todo, hemos aprendido que los planetas siguen órbitas elípticas alrededor del Sol, desafiando la creencia anterior en órbitas circulares perfectas.
+
+- Además, la velocidad de un planeta varía: es más rápida cuando está cerca del Sol y más lenta cuando está lejos, revelando una complejidad en el movimiento planetario.
+
+- Otro hallazgo fascinante es que los planetas barren áreas iguales en tiempos iguales durante sus órbitas, mostrando regularidad en la velocidad angular.
+
+- La tercera ley de Kepler establece una relación matemática precisa entre el período orbital y la distancia al Sol, proporcionando un marco para calcular el movimiento planetario.
+
+- En última instancia, estas leyes son fundamentales para la astronomía moderna, permitiendo predicciones precisas sobre las posiciones planetarias y expandiendo nuestro conocimiento del universo.
+
+%===================================================%
+\bibliographystyle{apacite}
+
+\bibliography{referencias}
+
+\end{document}ç
+
+
+@article{de2010leyes,
+  title={Leyes de kepler},
+  author={De Bernardini, Enzo},
+  journal={Astronom{\'\i}a Sur--http://astrosurf. com/astronosur},
+  year={2010}
+}
+
+%===================================================%
+@article{bell2003segunda,
+  title={La segunda ley de kepler como eslab{\'o}n entre la geometr{\'\i}a anal{\'\i}tica y el c{\'a}lculo integral},
+  author={Bell, Alexander and Torres, Roberto},
+  journal={Acta Latinoamericana de Matem{\'a}tica Educativa},
+  volume={16},
+  number={3},
+  pages={1--6},
+  year={2003},
+  publisher={Comite Latinoamericano de Matem{\'a}tica Educativa}
+}
+
+%===================================================%
+@online{SignificadosKepler,
+  title = {Leyes de Kepler - Significados.com},
+  url = {https://www.significados.com/leyes-de-kepler/},
+  urldate = {2023-10-12},
+}
+
+%===================================================%
+
+@misc{UNAM2023,
+  title = {Universidad Nacional Autónoma de México (UNAM)},
+  author = {{Dirección General de Divulgación de la Ciencia (DGDC)}},
+  year = {2023},
+  howpublished = {Hecho en México. Todos los derechos reservados},
+  note = {La información aquí publicada tiene como fuente principal a investigadores de la UNAM y es responsabilidad de quien la emite..},
+  url = {https://ciencia.unam.mx/leer/1184/johannes-kepler-y-las-leyes-del-movimiento-planetario},
+}
+
+
+
+@misc{KhanAcademy,  
+author={KhanAcademy}, 
+publisher={Khan Academy},
+url={https://es.khanacademy.org/science/fisica-pe-pre-u/x4594717deeb98bd3:leyes-de-newton/x4594717deeb98bd3:ley-de-gravitacion-universal/a/segunda-y-tercera-ley-de-kepler}} 
+
+
+%===================================================%

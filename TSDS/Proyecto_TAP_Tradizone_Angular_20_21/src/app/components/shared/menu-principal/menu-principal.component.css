@@ -1,0 +1,157 @@
+/* --------------------------- Menu principal:  --------------------------- */
+
+.menu-principal{
+    height: 100%;
+    margin: 5px 2%; 
+    margin-top: 10px;
+}
+
+.menu-principal ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+}
+
+.menu-principal ul li{
+    display: inline-block;
+}
+
+.menu-principal ul li a{
+    color: #5A8FED;
+    font-size: 16px;
+    font-weight:  bold;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu-principal ul li a:hover{
+    text-decoration: underline;
+    transition: .4s;
+}
+
+/* --------------------------- caja de sesión --------------------------- */
+
+.menu-principal .contenedor-sesion{
+    display: inline;
+    float: right;
+    margin-top: 25px;
+}
+
+/* --------------------------- Logo Tradizone --------------------------- */
+.menu-principal .logo{
+    display: inline-block;
+}
+
+.menu-principal .logo a img{
+    height: 100px;
+}
+
+/* --------------------------- General para todos los botones --------------------------- */
+.menu-principal .boton{
+    display: inline-block;
+    height: 40px;
+    width: 180px;
+    border-radius: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+}
+
+.menu-principal .boton a{
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* --------------------------- Boton de Registrarse --------------------------- */
+
+.menu-principal .btn-registrarse{
+    background-color: #5A8FED;;
+}
+
+.menu-principal .btn-registrarse a{
+    color: white;
+}
+
+/* --------------------------- Boton de Login  --------------------------- */
+
+.menu-principal .btn-login{
+    border: #5A8FED 2px solid;
+    margin-left: 10px;
+}
+
+.menu-principal .btn-login a {
+    color: #5A8FED;
+}
+
+/* --------------------------- menu despleglable de cuenta  --------------------------- */
+.menu-principal .contenedor-sesion > p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px; 
+    margin-right: 10px;
+}
+
+.menu-principal .contenedor-sesion > div {
+    display: inline-block;
+    position: relative;
+}
+
+
+.menu-principal .contenedor-sesion > div > img{
+    display: inline-block;
+    height: 50px;
+}
+
+.menu-principal .contenedor-sesion > div:hover > ul {
+    display: block;
+}
+
+.menu-principal .contenedor-sesion ul{
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 0;
+    right: 1px;
+    top: 50px;
+}
+
+.menu-principal .contenedor-sesion li{
+    display: block;
+    width: 150px;
+    border: #5A8FED solid 2px;
+    margin-top: -2px;
+    padding: 5px;
+    background-color: white;
+}
+
+.menu-principal .contenedor-sesion li:hover{
+    background-color: rgb(243, 241, 241);
+    cursor: pointer;
+}
+
+.menu-principal .contenedor-sesion ul li a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+
+.menu-principal .contenedor-sesion ul li button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: #5A8FED;
+    font-weight: bold;
+}
+
+/* --------------------------- Boton agregar Restaurante --------------------------- */
+
+.menu-principal .btn-restaurante{
+    background-color: rgb(44, 126, 44);
+    width: 210px;
+}
+
+.menu-principal .btn-restaurante a{
+    color: white;
+}
+
+

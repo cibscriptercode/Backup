@@ -1,0 +1,257 @@
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \includegraphics[width=0.4\linewidth]{figuras/cuenca.png}\\
+        \LARGE
+        \unidad\\
+        \programa\\
+        \curso
+        
+        \vspace{1cm}
+        
+        \Huge
+        \textbf{\titulo}
+            
+        \vspace{0.5cm}
+        \LARGE
+        \subtitulo
+            
+        \vspace{1.5cm}
+        
+        \large    
+        \autores
+            
+        \vfill
+        
+        \lugar\\
+        \fecha
+        
+    \end{center}
+\end{titlepage}
+
+
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{apacite}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{siunitx}
+%====================================================%
+
+\lstset{
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+%====================================================%
+\def \unidad{Universidad de Cuenca}
+\def \programa{Ingeniería en Telecomunicaciones}
+\def \curso{Grupo \# 3 - Cálculo en Varias Variables}
+\def \titulo{Trabajo en clase}
+\def \subtitulo {Resolución de Ejercicios}
+\def \autores{
+
+    
+    Javier Alexander Procel Morocho\\
+    javier.procel@ucuenca.edu.ec\\
+
+    \vspace{0.5cm}
+    
+    Julio Josué Macas Guamán\\
+    julio.macas@ucuenca.edu.ec\\
+    
+    \vspace{0.5cm}
+    Christian Eduardo Mendieta Tenesaca\\
+    eduardo.mendieta@ucuenca.edu.ec\\
+
+    \vspace{0.5cm}
+    Paul Alejandro Minga Fajardo\\
+    paul.minga@ucuenca.edu.ec\\
+}
+\def \fecha{Octubre 2023}
+\def \lugar{
+    Azuay, 
+    Cuenca
+}
+
+%====================================================%
+\begin{document}
+\input{portada}
+\tableofcontents \vspace{2mm}
+
+%====================================================%
+\begin{abstract}
+This report will present the resolution of the exercises proposed in the class, which will help us understand certain concepts of differential calculus in several variables.
+\end{abstract}
+
+%====================================================%
+\renewcommand{\IEEEkeywordsname}{Keywords}
+\begin{IEEEkeywords}
+derivada, variación, tiempo, diferencial
+\end{IEEEkeywords}
+
+%====================================================%
+\section{Ejercicio 14.3 (83)}\label{intro}
+
+La resistencia total R producida por tres conductores con resistencias \(R_{1}, R_{2}, R_{3}\) conectadas en un circuito eléctrico paralelo está dada por la fórmula:
+
+\[\frac{1}{R} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \frac{1}{R_{3}}\]
+
+Determine \(\partial R / \partial R_{1}\).
+\vspace{0.5cm}
+\begin{enumerate}
+    \item[(a)] Despejamos \(R\):
+
+        \[\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\]
+        
+        \[1 = \left(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right) \times R\]
+        
+        \[R = \frac{1}{\frac{R_2R_3 + R_1R_3 + R_1R_2}{R_1R_2R_3}}\]
+        
+        \[R = \frac{R_1R_2R_3}{R_2R_3 + R_1R_3 + R_1R_2}\]
+
+    \item[(b)] Derivamos el numerador y el denominador con respecto a  \(R_{1}\):
+
+        \[ \frac{\partial (R_1R_2R_3)}{\partial R_{1}} = R_2R_3 \]
+        \[ \frac{\partial (R_2R_3 + R_1R_3 + R_1R_2)}{\partial R_{1}} =R_3 +  R_2 \]
+
+    \item[(c)] Determinamos \(\partial R / \partial R_{1}\):
+
+        \[\frac{\partial R}{\partial R_{1}}\]
+        \[
+             = \frac{(R_2R_3 + R_1R_3 + R_1R_2)(R_2R_3) - (R_1R_2R_3)(R_3 +  R_2)}{(R_2R_3 + R_1R_3 + R_1R_2)^{2}}
+        \]
+
+        \[ = \frac{R_2^{2}R_3^{2} + R_1R_2R_3^{2} + R_1R_2^{2}R_3 - R_1R_2R_3^{2} - R_1R_2^{2}R_3}{(R_2R_3 + R_1R_3 + R_1R_2)^{2}}\]
+        \[ = \frac{R_2^{2}R_3^{2}}{(R_2R_3 + R_1R_3 + R_1R_2)^{2}}\]
+
+\end{enumerate}
+%====================================================%
+\section{Ejercicio 14.3 (100)}
+
+En un estudio de penetración de la escarcha se descubrió
+que la temperatura T en el tiempo t (medido en días) a una profundidad x (medida en metros) puede modelarse con la función
+
+\[T(x, t) = T_{o} + T_{1e}^{-\lambda x} sen(\omega t-\lambda x) \]
+
+donde \(\omega = 2\pi / 365\) y \(\lambda \) es una constante positiva.
+
+\begin{enumerate}
+    \item[(a)] Encuentre \(\partial T / \partial x\). ¿Cuál es su significado físico?
+    
+    \[\]
+    El significado físico de \(\partial T / \partial x\) es la tasa de cambio de la temperatura con respecto a la profundidad x. Es decir, indica cómo la temperatura cambia a medida que nos movemos en la dirección de la profundidad.
+
+    \
+
+    \item[(b)] Encuentre \(\partial T / \partial t\). ¿Cuál es su significado físico?
+    
+    El significado físico de \(\partial T / \partial t\) es la tasa de cambio de la temperatura con respecto al tiempo t. Indica cómo la temperatura cambia a medida que transcurre el tiempo.
+
+    \
+    
+    \item[(c)] Demuestre que T satisface la ecuación de calor \(T_{t} = kT_{xx}\) para cierta constante k.
+    
+    
+    
+    \item[(d)] Si \(\lambda = 0.2\), \(T_{o} = 0\) y \(T_{1} = 10\) use una computadora para graficar T(x, t).
+    
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.2\textwidth]{figuras/c1.png}
+    \caption{Vista lateral}
+    \label{fig:enter-label}
+    \end{figure}
+
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.2\textwidth]{figuras/c2.png}
+    \caption{Vista normal}
+    \label{fig:enter-label}
+    \end{figure}
+    
+    \item[(e)] ¿Cuál es el significado físico del término \(-\lambda x \) en la expresión \(sen(\omega t - \lambda x)\)?
+    
+    El termino \(-\lambda x \) en la expresión \(sen(\omega t - \lambda x)\) representa una fase espacial. Indica cómo la onda sinusoidal (que modela la variación de temperatura) cambia a lo largo de la dirección de la profundidad (x). En otras palabras, \(-\lambda x \) determina la posición inicial de la onda sinusoidal en el eje x. A medida que x aumenta, la fase espacial cambia, lo que afecta la distribución de temperatura a diferentes profundidades.
+    
+\end{enumerate} \newpage
+%====================================================%
+\section{Ejercicio 14.4 (5)}
+
+    Determine una ecuación del plano tangente a la superficie 
+    dada en el punto especificado.
+
+    \[z = \sqrt{xy}, \quad (1, 1, 1)\]
+    \[ f(x, y) = \sqrt{xy}\]
+    \[f_x(x, y) = \frac{1}{2\sqrt{x}} = \frac{1}{2}\]
+    \[f_y(x, y) = \frac{1}{2\sqrt{y}} = \frac{1}{2}\]
+    \[z - 1 = \frac{1}{2}(x - 1) + \frac{1}{2}(y - 1)\]
+    \[z = \frac{1}{2}x - \frac{1}{2} + \frac{1}{2}y - \frac{1}{2} + 1\]
+    \[z = \frac{1}{2}x + \frac{1}{2}y\]
+    
+   
+%====================================================%
+\section{Ejercicio 14.4 (34)}
+
+    Use diferenciales para estimar la cantidad de metal en una lata cilíndrica cerrada de 10 cm de alto y 4 cm de diámetro  si el metal en la tapa y el fondo es de 0.1 cm de grosor y el  metal en los lados es de 0.05 cm de grosor.
+
+    \[V = \pi r^2 h\]
+    \[\partial V = \left(\frac{\partial V}{\partial r}\right)dr + \left(\frac{\partial V}{\partial h}\right)dh\]
+    \[= 2\pi rh\,dr + \pi r^2\,dh\]
+    \[\partial V = 2\pi(2)(10)(0.1) + \pi(2^2)(0.05)\]
+    \[\partial V = \left(\frac{21}{5}\right)\pi\]
+    \[\partial V = 13.19 cm^3\]
+    
+%====================================================%
+\section{Ejercicio 14.5 (2)}
+
+2) Determinar dz/dt o dw/dt. \vspace{2mm}
+
+\[z = \frac{x-y}{x+2y}\hspace{2mm} , \hspace{2mm} x = e^{\pi t}\hspace{2mm} , \hspace{2mm} y = e^{-\pi t}\]
+
+ \[\frac{d z}{dt} = \frac{\partial z}{\partial x} (\frac{d x}{d t}) + \frac{\partial z}{\partial y}  (\frac{d y}{d t})\]
+
+\[\frac{d z}{dt} = \frac{1(x+2y)-(x-y)(1)}{(x+2y)^2} (\pi e^{\pi t}) + \frac{(-1)(x+2y)-(x-y)(2)}{(x+2y)^2}  (-\pi e^{-\pi t})\]
+
+\[\frac{d z}{dt} = \frac{x+2y-x+y}{(x+2y)^2} (\pi e^{\pi t}) + \frac{-x-2y-2x+2y}{(x+2y)^2}  (-\pi e^{-\pi t})\]
+
+\[\frac{d z}{dt} = \frac{3y\pi e^{\pi t}} {(x+2y)^2} + \frac{3x\pi e^{-\pi t}} {(x+2y)^2}  \]
+
+
+
+%====================================================%
+
+\section{Ejercicio 14.5 (40)}
+
+40) El voltaje V en un circuito eléctrico simple disminuye
+lentamente conforme se agota la batería. La resistencia R
+se reduce con lentitud conforme el resistor se calienta.
+Use la ley de Ohm, V = IR, para determinar cómo cambia
+la corriente I en el momento en que R = 400 $\si{\ohm}$,
+I = 0.08 A, dV/dt = -0.01 V/s, y dR/dt = 0.03 $\si{\ohm}$ /s
+
+
+\[I = \frac{V}{R}\]
+
+\[\frac{d I}{dt} = \frac{\partial I}{\partial V} (\frac{d V}{d t}) + \frac{\partial I}{\partial R}  (\frac{d R}{d t})\]
+
+\[\frac{d I}{dt} = \frac{1}{R} (-0.01) - \frac{V}{R^2}  (0.03)\]
+
+\[\frac{d I}{dt} = \frac{1}{R} (-0.01) - \frac{I(R)}{R^2}  (0.03)\]
+
+\[\frac{d I}{dt} = \frac{1}{400} (-0.01) - \frac{0.08}{400}  (0.03)\]
+
+\[\frac{d I}{dt} = -0.000031 \hspace{2mm}\frac{A}{s}\]
+%====================================================%
+\end{document}
+
+

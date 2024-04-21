@@ -1,0 +1,32 @@
+ <div class="menu-principal">
+    <div class="logo">
+      <a href="home"><img src="../../../../assets/img/logo_tradizone.gif"></a>
+    </div>
+    <ul>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Restaurantes</a></li>
+      <li><a href="#">Menu Recomendado</a></li>
+      <li><a href="#">A cerca de</a></li>
+    </ul>
+
+    <!-- ------------------ Aparacera cuando el usuario no haya iniciado sesion ------------------ -->
+    <div class="contenedor-sesion" *ngIf = "restaurante == null && usuario == null">
+      <div class="boton btn-registrarse" ><a href="usuario-registro">Registrarse</a> </div>
+      <div class="boton btn-login" ><a href="login">Iniciar Sesión</a></div>
+    </div>
+
+
+    <!-- ------------------ Aparacera cuando el usuario haya iniciado sesion y tenga al menos un restaurante ------------------ -->
+    <div class="contenedor-sesion" *ngIf = "usuario != null">
+      <p>{{usuario.nombre}}</p>
+      <div>
+        <img src="{{avatar.url}}" >
+        <ul *ngIf = "usuario != null && restaurante != null">
+          <li><a href=""> <i class="fas fa-file-invoice"></i> Tablero</a></li>
+          <li><a href=""> <i class="far fa-sun"></i> Configuración de la cuenta </a></li>
+          <li><button><i class="fas fa-sign-out-alt"></i> Cerrar Sesión </button></li>
+        </ul>
+      </div>
+    </div>
+
+</div>
